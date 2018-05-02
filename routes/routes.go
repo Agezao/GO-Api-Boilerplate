@@ -1,7 +1,7 @@
 package routes
 
-import MainRoute "./main"
-import ProductsRoute "./products"
+import mainRoute "./main"
+import productsRoute "./products"
 import "net/http"
 import interceptor "../interceptors"
 import . "../interceptors/trace"
@@ -12,6 +12,6 @@ func Bind() {
 	intercept := interceptor.Chain(TraceInterceptor, ShaperInterceptor)
 	interceptSecure := interceptor.Chain(intercept, TokenInterceptor)
 
-	http.HandleFunc("/", intercept(MainRoute.Get))
-	http.HandleFunc("/products", interceptSecure(ProductsRoute.Get))
+	http.HandleFunc("/", intercept(mainRoute.Get))
+	http.HandleFunc("/products", interceptSecure(productsRoute.Get))
 }
