@@ -1,4 +1,4 @@
-package myappRoutesMain
+package mainRoute
 
 import (
 	"encoding/json"

@@ -1,12 +1,15 @@
 package main
 
-import "net/http"
-import AppRouter "./routes"
+import (
+	AppRouter "./routes"
+	"log"
+	"net/http"
+)
 
 func main() {
 	// Binding routes
 	AppRouter.Bind()
 
 	// Starting server
-	http.ListenAndServe(":8089", nil)
+	log.Fatal(http.ListenAndServe(":8089", nil))
 }
