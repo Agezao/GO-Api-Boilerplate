@@ -6,14 +6,10 @@ import (
 	"strconv"
 
 	. "./config"
-	ctx "./contexts/mongodb"
 	appRouter "./routes"
 )
 
 func main() {
-	//Connecting to db
-	ctx.Connect()
-
 	// Binding routes
 	appRouter.Bind()
 
