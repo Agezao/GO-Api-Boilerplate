@@ -8,6 +8,7 @@ import (
 
 type config struct {
 	Db     string
+	DbName string
 	Port   int
 	Secret string
 }

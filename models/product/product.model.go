@@ -1,6 +1,6 @@
 package productModel
 
 type Product struct {
-	ID   uint   `json:"id"`
-	Name string `json:"name"`
+	ID   uint   `json:"id" bson:"_id"`
+	Name string `json:"name" bson:"name"`
 }

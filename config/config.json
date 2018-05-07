@@ -1,5 +1,6 @@
 {
-  "db": "mongodb://localhost:27017/products-go",
+  "db": "mongodb://localhost:27017",
+  "dbName": "products-go",
   "port": 8083,
   "secret": "40ff564e-1ccb-4060-9c8a-a615091e3c0f"
 }
